@@ -1,0 +1,160 @@
+[
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0001",
+    "generated_at": "2026-11-04T08:27:05.869420Z",
+    "incident_timestamp": "2026-11-03 11:12:00+00:00",
+    "severity": "CRITICAL",
+    "confidence_score": 92,
+    "rule": {
+      "id": "RULE-002",
+      "name": "Unauthorized IAM Privilege Escalation",
+      "mitre_technique": "T1098 - Account Manipulation"
+    },
+    "entities": {
+      "user": "guest",
+      "source_ip": "203.0.113.88",
+      "target_resource": "IAM / AttachUserPolicy"
+    },
+    "details": "User 'guest' attempted sensitive IAM action 'AttachUserPolicy' (status: Unauthorized).",
+    "raw_evidence": {
+      "eventName": "AttachUserPolicy",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess",
+      "errorCode": "UnauthorizedOperation",
+      "errorMessage": null
+    }
+  },
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0002",
+    "generated_at": "2026-11-04T08:27:05.869424Z",
+    "incident_timestamp": "2026-11-03 11:16:00+00:00",
+    "severity": "CRITICAL",
+    "confidence_score": 94,
+    "rule": {
+      "id": "RULE-003",
+      "name": "Massive S3 Data Exfiltration",
+      "mitre_technique": "T1530 - Data from Cloud Storage"
+    },
+    "entities": {
+      "user": "unknown_user",
+      "source_ip": "203.0.113.88",
+      "target_resource": "S3 / cset462-corp-data-us-west-2"
+    },
+    "details": "Anomalous high-volume data transfer (23.84 MB) downloaded by user 'unknown_user'.",
+    "raw_evidence": {
+      "bytesTransferred": 25000000,
+      "size_mb": 23.84,
+      "bucketName": "cset462-corp-data-us-west-2",
+      "awsRegion": "us-west-2"
+    }
+  },
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0003",
+    "generated_at": "2026-11-04T08:27:05.869425Z",
+    "incident_timestamp": "2026-11-03 11:20:00+00:00",
+    "severity": "CRITICAL",
+    "confidence_score": 99,
+    "rule": {
+      "id": "RULE-004",
+      "name": "AWS Root Account Activity Detected",
+      "mitre_technique": "T1078.001 - Valid Accounts: Default Accounts"
+    },
+    "entities": {
+      "user": "root",
+      "source_ip": "185.220.101.5",
+      "target_resource": "IAM / ConsoleLogin"
+    },
+    "details": "Direct action 'ConsoleLogin' executed using the AWS root account. Violates CIS AWS Foundations Benchmark 1.1.",
+    "raw_evidence": {
+      "eventSource": "IAM",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "mfaUsed": false
+    }
+  },
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0004",
+    "generated_at": "2026-11-04T08:27:05.869427Z",
+    "incident_timestamp": "2026-11-03 11:24:00+00:00",
+    "severity": "CRITICAL",
+    "confidence_score": 98,
+    "rule": {
+      "id": "RULE-005",
+      "name": "CloudTrail Defense Impairment / Tampering",
+      "mitre_technique": "T1562.001 - Impair Defenses: Disable Cloud Logs"
+    },
+    "entities": {
+      "user": "unknown_user",
+      "source_ip": "198.51.100.45",
+      "target_resource": "CloudTrail / StopLogging"
+    },
+    "details": "Attempted disruption of security audit trails via 'StopLogging' (Status: Unauthorized).",
+    "raw_evidence": {
+      "action": "StopLogging",
+      "status": "Unauthorized",
+      "errorCode": "UnauthorizedOperation"
+    }
+  },
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0005",
+    "generated_at": "2026-11-04T08:27:05.869428Z",
+    "incident_timestamp": "2026-11-03 11:00:00+00:00",
+    "severity": "HIGH",
+    "confidence_score": 95,
+    "rule": {
+      "id": "RULE-001",
+      "name": "Brute-Force Authentication Attempt",
+      "mitre_technique": "T1110.001 - Brute Force: Password Guessing"
+    },
+    "entities": {
+      "user": "admin",
+      "source_ip": "192.0.2.142",
+      "target_resource": "IAM / ConsoleLogin"
+    },
+    "details": "Detected 3 failed/unauthorized login attempts from IP 192.0.2.142 within 15 minutes.",
+    "raw_evidence": {
+      "failed_attempts": 3,
+      "target_users": [
+        "admin"
+      ],
+      "time_window_start": "2026-11-03 11:00:00+00:00",
+      "time_window_end": "2026-11-03 11:08:00+00:00"
+    }
+  },
+  {
+    "source": "PythonCloudLogAnalyzer",
+    "event_id": "INC-0006",
+    "generated_at": "2026-11-04T08:27:05.869429Z",
+    "incident_timestamp": "2026-11-03 11:32:00+00:00",
+    "severity": "HIGH",
+    "confidence_score": 88,
+    "rule": {
+      "id": "RULE-006",
+      "name": "Impossible Travel / Geolocation Anomaly",
+      "mitre_technique": "T1078 - Valid Accounts"
+    },
+    "entities": {
+      "user": "shourya.tuhar",
+      "source_ip": "103.21.244.10 -> 185.220.101.5",
+      "target_resource": "IAM Authentication"
+    },
+    "details": "User 'shourya.tuhar' logged in from ap-south-1 and eu-west-1 within 4.0 minutes.",
+    "raw_evidence": {
+      "first_login": {
+        "time": "2026-11-03 11:28:00+00:00",
+        "region": "ap-south-1",
+        "ip": "103.21.244.10"
+      },
+      "second_login": {
+        "time": "2026-11-03 11:32:00+00:00",
+        "region": "eu-west-1",
+        "ip": "185.220.101.5"
+      },
+      "time_difference_minutes": 4.0
+    }
+  }
+]

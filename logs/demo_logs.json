@@ -1,0 +1,376 @@
+[
+  {
+    "eventTime": "2026-11-03T09:00:00Z",
+    "eventSource": "IAM",
+    "eventName": "ConsoleLogin",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA770487",
+      "arn": "arn:aws:iam::123456789012:user/alice",
+      "userName": "alice",
+      "ipAddress": "10.0.0.10"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 1200,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:07:00Z",
+    "eventSource": "S3",
+    "eventName": "GetObject",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA216739",
+      "arn": "arn:aws:iam::123456789012:user/alice",
+      "userName": "alice",
+      "ipAddress": "10.0.0.10"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 4200,
+    "requestParameters": {
+      "bucketName": "cset462-corp-data-us-east-1",
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:14:00Z",
+    "eventSource": "EC2",
+    "eventName": "DescribeInstances",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA126225",
+      "arn": "arn:aws:iam::123456789012:user/devops",
+      "userName": "devops",
+      "ipAddress": "10.0.0.11"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 800,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:21:00Z",
+    "eventSource": "Lambda",
+    "eventName": "Invoke",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA877572",
+      "arn": "arn:aws:iam::123456789012:user/service-role",
+      "userName": "service-role",
+      "ipAddress": "10.0.0.12"
+    },
+    "awsRegion": "us-west-2",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 900,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:28:00Z",
+    "eventSource": "S3",
+    "eventName": "PutObject",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA388389",
+      "arn": "arn:aws:iam::123456789012:user/alice",
+      "userName": "alice",
+      "ipAddress": "10.0.0.10"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 2200,
+    "requestParameters": {
+      "bucketName": "cset462-corp-data-us-east-1",
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:35:00Z",
+    "eventSource": "IAM",
+    "eventName": "ListUsers",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA356787",
+      "arn": "arn:aws:iam::123456789012:user/auditor",
+      "userName": "auditor",
+      "ipAddress": "10.0.0.13"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 500,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:42:00Z",
+    "eventSource": "EC2",
+    "eventName": "DescribeInstances",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA334053",
+      "arn": "arn:aws:iam::123456789012:user/devops",
+      "userName": "devops",
+      "ipAddress": "10.0.0.11"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 750,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T09:49:00Z",
+    "eventSource": "S3",
+    "eventName": "GetObject",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA246316",
+      "arn": "arn:aws:iam::123456789012:user/alice",
+      "userName": "alice",
+      "ipAddress": "10.0.0.10"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 3100,
+    "requestParameters": {
+      "bucketName": "cset462-corp-data-us-east-1",
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:00:00Z",
+    "eventSource": "IAM",
+    "eventName": "LoginAttempt",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA872246",
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "userName": "admin",
+      "ipAddress": "192.0.2.142"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Failed",
+    "errorCode": "AccessDeniedException",
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 120,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:04:00Z",
+    "eventSource": "IAM",
+    "eventName": "LoginAttempt",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA207473",
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "userName": "admin",
+      "ipAddress": "192.0.2.142"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Failed",
+    "errorCode": "AccessDeniedException",
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 120,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:08:00Z",
+    "eventSource": "IAM",
+    "eventName": "LoginAttempt",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA809570",
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "userName": "admin",
+      "ipAddress": "192.0.2.142"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Failed",
+    "errorCode": "AccessDeniedException",
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 120,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:12:00Z",
+    "eventSource": "IAM",
+    "eventName": "AttachUserPolicy",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA876646",
+      "arn": "arn:aws:iam::123456789012:user/guest",
+      "userName": "guest",
+      "ipAddress": "203.0.113.88"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Unauthorized",
+    "errorCode": "UnauthorizedOperation",
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 450,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:16:00Z",
+    "eventSource": "S3",
+    "eventName": "FileDownload",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA671858",
+      "arn": "arn:aws:iam::123456789012:user/unknown_user",
+      "userName": "unknown_user",
+      "ipAddress": "203.0.113.88"
+    },
+    "awsRegion": "us-west-2",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 25000000,
+    "requestParameters": {
+      "bucketName": "cset462-corp-data-us-west-2",
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:20:00Z",
+    "eventSource": "IAM",
+    "eventName": "ConsoleLogin",
+    "userIdentity": {
+      "type": "Root",
+      "principalId": "AIDA191161",
+      "arn": "arn:aws:iam::123456789012:root",
+      "userName": "root",
+      "ipAddress": "185.220.101.5"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 1500,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:24:00Z",
+    "eventSource": "CloudTrail",
+    "eventName": "StopLogging",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA719176",
+      "arn": "arn:aws:iam::123456789012:user/unknown_user",
+      "userName": "unknown_user",
+      "ipAddress": "198.51.100.45"
+    },
+    "awsRegion": "us-east-1",
+    "status": "Unauthorized",
+    "errorCode": "UnauthorizedOperation",
+    "errorMessage": null,
+    "mfaUsed": false,
+    "bytesTransferred": 320,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:28:00Z",
+    "eventSource": "IAM",
+    "eventName": "LoginAttempt",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA542417",
+      "arn": "arn:aws:iam::123456789012:user/shourya.tuhar",
+      "userName": "shourya.tuhar",
+      "ipAddress": "103.21.244.10"
+    },
+    "awsRegion": "ap-south-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 2100,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  },
+  {
+    "eventTime": "2026-11-03T11:32:00Z",
+    "eventSource": "IAM",
+    "eventName": "LoginAttempt",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDA133326",
+      "arn": "arn:aws:iam::123456789012:user/shourya.tuhar",
+      "userName": "shourya.tuhar",
+      "ipAddress": "185.220.101.5"
+    },
+    "awsRegion": "eu-west-1",
+    "status": "Success",
+    "errorCode": null,
+    "errorMessage": null,
+    "mfaUsed": true,
+    "bytesTransferred": 2200,
+    "requestParameters": {
+      "bucketName": null,
+      "policyArn": null
+    }
+  }
+]
