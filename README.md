@@ -6,13 +6,6 @@
 [![Threat%20Matrix](https://img.shields.io/badge/MITRE%20ATT%26CK-Cloud-red.svg)]()
 [![UI](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B.svg)]()
 
-> **Course:** CSET 462 – Cloud Security and Compliances  
-> **Team Members:**
-> - **Shourya Tuhar (Team Leader)**
-> - **Manan Gupta**
-> - **Mayank Sheoran**
-> - **Mandeep Singh**
-
 ---
 
 ## 📌 Executive Summary
@@ -218,12 +211,5 @@ The dashboard defaults to a 17-event focused dataset with eight baseline events 
 
 ---
 
-## 👥 Course & Team Information
-- **Course:** CSET 462 – Cloud Security and Compliances
-- **Team:**
-  - **Shourya Tuhar (Leader)**
-  - **Manan Gupta**
-  - **Mayank Sheoran**
-  - **Mandeep Singh**
 
 *Disclaimer: This project uses synthetic cloud event logs for demonstration, security testing, and compliance research without requiring live AWS billing or credentials.*
